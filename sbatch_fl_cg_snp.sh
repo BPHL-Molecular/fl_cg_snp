@@ -11,5 +11,7 @@
 #SBATCH --output=fl_cg_snp.%j.out
 #SBATCH --error=fl_cg_snp.%j.err
 
+module load apptainer
+
 #Run script/command and use $SLURM_CPUS_ON_NODE
 python fl_cg_snp.py --threads $SLURM_CPUS_ON_NODE
